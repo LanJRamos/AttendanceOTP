@@ -1,0 +1,89 @@
+.boxLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    
+    min-height: 100%;
+    flex: 80%;
+    border-radius: 15px;
+    padding: 1cm 0;
+    background: #EAA959;
+    overflow-y: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.divLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 1.2cm;
+    width: 80%;
+}
+
+.logPNG {
+    width: 4cm;
+    border-radius: 100%;
+    padding: 1px;
+    background-color: white;
+}
+
+.logInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 1cm;
+    padding: 0%;
+    
+}
+
+.logInput>h1{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    line-height: 0%;
+    font-weight: 400;
+    justify-content: left;
+    display: flex;
+}
+
+.logInput>input {
+    width: 40vw;
+    height: 1cm;
+
+    border-radius: 15px;
+    border: 1px solid #000;
+    background: #EEF0F1;
+    padding: 5px 10px;
+    font-size: 28px;
+    color: #414141;
+}
+
+.logInput>a {
+    font-size: small;
+    color: #1c7185;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.logSubmit>input {
+    height: 1.5cm;
+    padding: 2px 1.5cm;
+    border-radius: 10px;
+    border: 1px black solid;
+
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.logSubmit>input:hover {
+    color: white;
+    background-color: #000;
+}

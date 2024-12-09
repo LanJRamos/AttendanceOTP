@@ -1,0 +1,11 @@
+.body {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 1.5cm;
+    left: 10px;
+    margin: 5px 0;
+
+    min-width: 99%;
+    min-height: 88%;
+}
