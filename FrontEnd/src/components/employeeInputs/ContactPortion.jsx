@@ -5,6 +5,9 @@ import { HiMail } from 'react-icons/hi'
 export const ContactPortion = ({ register, errors }) => {
     const employeeErr = errors.employee;
     const [file, setFile] = useState();
+
+
+    
     return (
         <>
             <Label htmlFor="contactNumber1" value="Contact Number" />
