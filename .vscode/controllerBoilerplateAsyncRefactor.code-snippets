@@ -1,0 +1,41 @@
+{
+	// Place your TFI-Attendance workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Async Refactor": {
+		"scope": "javascript,typescript",
+		"prefix": "refAll",
+		"body": [
+			"static async findAll(req,res,next){"
+			"	res.send(await ${1:/*classname*/}.getAll().catch(err=>next(err)))"
+			"}"
+			"static async findByID(req,res){"
+			"	res.send(await ${1:/*classname*/}.getID(req.params.id).catch(err=>next(err)))"
+			"}"
+			"static async getFieldNames(req,res){"
+			"	res.send(await ${1:/*classname*/}.getFields().catch(err=>next(err)))"
+			"}"
+			"static async create(req,res,next){"
+			"	const new${1:/*classname*/} = new ${1:/*classname*/}(req.body.${2:/*lwrcaseclassname*/})"
+			"	res.send(await new${1:/*classname*/}.create().catch(err=>next(err)))"
+			"}"
+			"static async update(req,res,next){"
+			"	try {"
+			"		if(!req.body.${2:/*lwrcaseclassname*/}.${3:/*classNameID*/}ID) throw new Error(`${3:/*classNameID*/}ID is undefined`)"
+			"		if(Object.values(req.body.${2:/*lwrcaseclassname*/}).filter(a=>a !== undefined).length <= 1) throw new Error(`Insufficient values`)"
+			"		const update${1:/*classname*/} = new ${1:/*classname*/}(req.body.${2:/*lwrcaseclassname*/})"
+			"		res.send(await update${1:/*classname*/}.update())"
+			"	} catch (error) {"
+			"		console.error(error);"
+			"		res.status(500).send(error)"
+			"	}"
+			"}"
+			],
+		"description": "Async refactor"
+	}
+	
+}
