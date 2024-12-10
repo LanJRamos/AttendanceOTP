@@ -11,8 +11,10 @@ import reasonRouter from "./src/routes/reason.router.js"
 import shiftRouter from "./src/routes/shift.router.js"
 import addressRouter from "./src/routes/address.router.js"
 import leaveDaysRouter from './src/routes/leaveDays.router.js'
+import dotenv from 'dotenv';
 
 const app = express()
+dotenv.config();
 
 app.set('trust_proxy',1)
 
@@ -40,9 +42,12 @@ app.use('/shift',shiftRouter)
 app.use('/address',addressRouter)
 app.use('/leavedays',leaveDaysRouter)
 
+
+
 app.get('*',(res,req)=>{
     req.send('404 Page not Found')
 })
 app.listen(8080,()=>{
     console.log(`Server is listening on port 8080`)
 })
+

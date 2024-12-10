@@ -11,5 +11,8 @@ userRouter.post('/login',UserController.login)
 userRouter.post('/create',UserController.create)
 userRouter.patch('/update',UserController.update)
 userRouter.get('/:id',UserController.findByID)
+userRouter.post('/send-otp', UserController.sendOtp);
+userRouter.post('/verify-otp', UserController.verifyOtp);
+
 
 export default userRouter

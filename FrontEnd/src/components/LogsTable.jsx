@@ -23,7 +23,7 @@ function LogTable({setLogList}){
                 {logID:1,generatedBy:'Lance B Ramos',changesDesc:'Created Shift Row at 2023-12-07'},
             ]
             )
-    },)
+    },[],)
     return(
         <div className='overflow-y-auto max-h-[90vh] w-full'>
             <Table className="table-auto"hoverable>

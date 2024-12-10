@@ -25,6 +25,7 @@ const EmployeeRegisterForm = ()=>{
             response.status === 200 ? reset() : alert(`Something went wrong`)
         })
     }
+    
     return(
         <>
         <div className="flex justify-center items-center">
